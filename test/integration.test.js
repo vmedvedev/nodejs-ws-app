@@ -234,7 +234,7 @@ describe("Integration", () => {
     expect(responseMessage.updatedAt).toBeDefined();
   });
 
-  it("Server should answer with status message Subscribed and act with idempotence", async () => {
+  it("Server should answer with status message Unsubscribe and act with idempotence", async () => {
     // Create test client
     const client = await createTestWsClient(host, port, (data, client) => {
       client.terminate();

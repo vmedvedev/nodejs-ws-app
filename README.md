@@ -3,14 +3,14 @@ NodeJS application (Server and Client) that would utilize WebSocket transport an
 
 Server handles 3 methods: Subscribe, Unsubscribe, CountSubscribers.
 
-Subscribe:
+Subscribe (response delay 4 seconds):
 ```
 {
   "type": "Subscribe", "status": "Subscribed", "updatedAt": ***
 }
 ```
 
-Unsubscribe:
+Unsubscribe (response delay 8 seconds):
 ```
 {
   "type": "Unsubscribe", "status": "Unsubscribed", "updatedAt": ***

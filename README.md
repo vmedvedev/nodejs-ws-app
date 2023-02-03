@@ -1,5 +1,48 @@
-# nodejs-ws-app
+# Description
 NodeJS application (Server and Client) that would utilize WebSocket transport and use json as a contract based approach.
+
+Server handles 3 methods: Subscribe, Unsubscribe, CountSubscribers.
+
+Subscribe:
+```
+{
+  "type": "Subscribe", "status": "Subscribed", "updatedAt": ***
+}
+```
+
+Unsubscribe:
+```
+{
+  "type": "Unsubscribe", "status": "Unsubscribed", "updatedAt": ***
+}
+```
+
+CountSubscribers:
+```
+{
+  "type": "CountSubscribers", "count": *** "updatedAt": ***
+}
+```
+
+Errors:
+```
+{
+ "type": "Error",
+ "error": "Requested method not implemented", "updatedAt": ***
+}
+
+{
+  "type": "Error",
+  "error": "Bad formatted payload, non JSON", "updatedAt": ***
+}
+```
+
+Server produces heartbeat events every second:
+```
+{
+  "type": "Heartbeat", "updatedAt": ***
+}
+```
 
 ### Setup
 
